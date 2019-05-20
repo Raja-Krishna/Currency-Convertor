@@ -1,0 +1,72 @@
+
+<!--Raja Krishna 2019-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            margin-top: 100px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+
+    <meta charset="UTF-8">
+    <title>Currency Convertor</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-3">Currency Converter</h1>
+                <form>
+                    <div class="form-group">
+                        <input id="dollarInput" min="0" type="number" class="form-control form-control-lg" placeholder="Enter Dollars...">
+                    </div>
+                </form>
+                <div id="output">
+                    <div class="card bg-primary mb-2">
+                        <div class="card-body">
+                            <h4>Euro:</h4>
+                            <div id="euroOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-success mb-2">
+                        <div class="card-body">
+                            <h4>Yen:</h4>
+                            <div id="yenOutput"></div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-danger mb-2">
+                        <div class="card-body">
+                            <h4>Rupee:</h4>
+                            <div id="rupeeOutput"></div>
+                        </div>
+                    </div>
+                </div>
+                <h3  class="text-center mb-3 font-italic">This conversion rate is from 03-11-2019</h3>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("output").style.visibility = "hidden";
+        document.getElementById("dollarInput").addEventListener("input", function(e) {
+        document.getElementById("output").style.visibility = "visible";
+        let dollar = e.target.value;
+        document.getElementById("euroOutput").innerHTML = (dollar / 0.89).toFixed(2);
+        document.getElementById("yenOutput").innerHTML = (dollar * 111.21).toFixed(2);
+        document.getElementById("rupeeOutput").innerHTML = (dollar * 69.80).toFixed(2);
+        });
+    </script>
+
+</body>
+
+</html>
