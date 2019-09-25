@@ -20,7 +20,6 @@
 </head>
 
 <body>
-
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -52,7 +51,6 @@
                         </div>
                     </div>
                 </div>
-                <h3  class="text-center mb-3 font-italic">This conversion rate is from 03-11-2019</h3>
             </div>
         </div>
     </div>
@@ -61,9 +59,9 @@
         document.getElementById("dollarInput").addEventListener("input", function(e) {
         document.getElementById("output").style.visibility = "visible";
         let dollar = e.target.value;
-        document.getElementById("euroOutput").innerHTML = (dollar / 0.89).toFixed(2);
-        document.getElementById("yenOutput").innerHTML = (dollar * 111.21).toFixed(2);
-        document.getElementById("rupeeOutput").innerHTML = (dollar * 69.80).toFixed(2);
+        document.getElementById("euroOutput").innerHTML = (dollar / 0.91).toFixed(2);
+        document.getElementById("yenOutput").innerHTML = (dollar * 107.77).toFixed(2);
+        document.getElementById("rupeeOutput").innerHTML = (dollar * 71.32).toFixed(2);
         });
     </script>
 
